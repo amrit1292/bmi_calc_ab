@@ -43,11 +43,10 @@ prompt = (
     f"and height {height} metres."
 )
 
-
-response = client.models.generate_content(
+if st.button("Take AI opinion"):
+    response = client.models.generate_content(
     model="gemini-2.5-flash",
-    contents=prompt
-)
+    contents=prompt)
 
 # Display AI insights
 st.write(response.text)
