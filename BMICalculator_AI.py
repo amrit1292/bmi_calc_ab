@@ -3,7 +3,7 @@ import google.genai as genai
 
 google_api_key = st.secrets["google"]["api_key"]
 
-client = genai.Client(api_key="google_api_key")
+client = genai.Client(api_key=google_api_key)
 
 
 st.title("BMI Calculator with AI Insights")
